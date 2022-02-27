@@ -14,7 +14,19 @@ for (i = 2; i <= sqrt(value); i++) {
 return true;
 }
 uint64_t nPrime(uint64_t n) {
-// вставьте код функции
+  uint64_t prime = 1;
+  if (n == 1)
+    return 2;
+  for (int i = 1; i < n; i++)
+    {
+      prime += 2;
+      while (checkPrime (prime) == 0)
+	{
+	  prime += 2;
+	}
+    }
+  return prime;
+}
 }
 
 uint64_t nextPrime(uint64_t value) {
