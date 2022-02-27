@@ -50,3 +50,14 @@ prime += 2;
 }
 return sum;
 }
+int main() {
+unsigned int start_time = clock();
+cout « nPrime(500) « endl;
+cout « nextPrime(1831) « endl;
+cout « checkPrime(3559) « endl;
+cout « sumPrime(2000000) « endl;
+cout « sumPrime(1) « endl;
+unsigned int end_time = clock(); // конечное время
+unsigned int search_time = end_time - start_time; // искомое время
+cout « "runtime = " « search_time / 1000.0 « " seconds" « endl « endl;
+}
